@@ -8,7 +8,7 @@
         }, options);
         var $passwordInput = $(settings.passwordInput),
             $progress = this;
-        if (!$passwordInput.length) throw new TypeError('Please enter a valid password input');
+        if (!settings.passwordInput) throw new TypeError('Please enter password input');
         $passwordInput.on('keyup', function () {
             updateProgress($passwordInput, $progress);
         });
